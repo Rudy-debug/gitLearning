@@ -1,0 +1,49 @@
+git help            //help manual
+git help tutorial
+git help [command]
+
+//identify yourself 
+//global information
+git config --global user.name "Your Name Comes Here" 
+git config --global user.email you@yourdomain.example.com
+
+// local information using for specifying document
+git config user.name "Your Name Comes Here" 
+git config user.email you@yourdomain.example.com
+
+//Local command
+git init
+git status
+git add [filename]
+git commit -m "log information" [filename]
+
+//log 
+git log [filename]
+git log --pretty=oneline [filename]
+git reflog
+git reset –hard [id]       //Switch version
+git diff [filename]        //Compare files
+git diff [id] [filename]   //Compare files with different version
+
+//branch
+git branch –v   
+git branch [branchname]     //create new branch
+git checkout [branchname]	//Switch branch
+git merge [branchname]      //merge branch operating on the main branch(master) 
+
+//Remote command
+git remote –v
+git remote add origin [URL] //origin is the Alias
+git push origin master    //Upload the project to the remote(e.g. GitHub)
+git clone URL
+git fetch origin master
+git merge origin/master  
+git pull origin master
+
+//error
+//Failed to connect to github.com port 443: Timed out
+git config --global --unset http.proxy 
+
+//OpenSSL SSL_read: Connection was reset, errno 10054
+git config --global http.sslVerify "false" //
+
